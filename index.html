@@ -47,32 +47,39 @@
         .hidden { display: none !important; } .text-center { text-align: center; } .text-right { text-align: right; }
         button { cursor: pointer; border: none; outline: none; transition: all 0.2s ease; } button:active { transform: scale(0.95); }
 
-        /* HEADER BUTTONS */
+        /* DIKUNUPE TŠA HEADER & SEKENGTŠHI SA GO SWANYA */
         .header-actions { position: absolute; top: 15px; left: 15px; right: 15px; display: flex; justify-content: space-between; align-items: center; z-index: 50; }
         .left-actions { display: flex; gap: 8px; align-items: center; }
+        
         .btn-theme { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(5px); border-radius: 50%; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; font-size: 1.1rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); color: #000; }
+        
         .sync-status { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(5px); padding: 5px 10px; border-radius: var(--radius-pill); font-size: 0.65rem; font-weight: 600; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 4px; color: var(--text-muted); transition: all 0.3s; opacity: 0; transform: translateY(-10px); }
         .sync-status.show { opacity: 1; transform: translateY(0); }
-        .sync-status.syncing { color: #f59e0b; } .sync-status.success { color: var(--primary); }
+        .sync-status.syncing { color: #f59e0b; }
+        .sync-status.success { color: var(--primary); }
+
         .floating-saldo { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(5px); padding: 6px 15px; border-radius: var(--radius-pill); font-size: 0.75rem; font-weight: 600; color: #00695c; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 5px; }
 
         [data-theme="dark"] .btn-theme, [data-theme="dark"] .floating-saldo, [data-theme="dark"] .sync-status { background: rgba(31, 41, 55, 0.85); border-color: rgba(255,255,255,0.1); color: #e5e7eb; }
 
-        .hero { position: relative; height: 270px; background-image: var(--hero-overlay), url('https://ibb.co.com/jPK7h24Q'); background-position: top center; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 15px; transition: background-image 0.3s ease; }
+        .hero { position: relative; height: 270px; background-image: var(--hero-overlay), url('https://www.image2url.com/r2/default/images/1780641686418-a5dc5772-95d3-4aac-8e4a-b9e318975b8e.jpg'); background-position: top center; background-size: cover; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-bottom: 15px; transition: background-image 0.3s ease; }
         .hero-title { font-family: 'Times New Roman', Times, serif; font-size: 2.5rem; font-weight: bold; color: var(--hero-title-color); text-transform: uppercase; letter-spacing: 2px; -webkit-text-stroke: 1.2px var(--hero-title-stroke); filter: drop-shadow(0px 2px 4px var(--hero-title-shadow)); margin-bottom: 8px; line-height: 1; z-index: 10; transition: all 0.3s ease; }
         .arabic-badge { background: linear-gradient(to right, var(--primary), var(--primary-dark)); color: var(--text-inverse); padding: 4px 28px; border-radius: var(--radius-pill); font-family: 'Amiri', serif; font-size: 1.5rem; box-shadow: var(--shadow-md); position: relative; z-index: 10; }
 
+        /* MONGWALO O MO SEPELA */
         .marquee-container { margin: 10px 20px 10px 20px; overflow: hidden; position: relative; z-index: 15; }
         .marquee-content { display: inline-block; white-space: nowrap; padding-left: 100%; animation: marquee 35s linear infinite; font-size: 0.75rem; font-weight: 500; color: var(--text-main); }
         @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
 
+        /* DI-TAB */
         .tabs { display: flex; gap: 12px; margin: 0 20px 15px 20px; position: sticky; top: 15px; z-index: 20; }
         .tab-btn { flex: 1; padding: 10px 0; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.8px; background: var(--tab-bg); color: var(--tab-text); transition: all 0.3s ease; border: 1px solid var(--border-color); }
         .tab-btn.active { background: var(--primary); color: var(--text-inverse); border-color: var(--primary); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
 
+        /* KAROLO YA TAFOLA */
         .data-section { padding: 0 20px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
         
-        /* HEADER TABEL DENGAN IKON UNDUH */
+        /* HLOO YA TAFOLA LE Aekhone YA GO LAUNTA */
         .table-toolbar { display: flex; justify-content: flex-end; margin-bottom: 10px; }
         .btn-download { background: var(--primary); color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; box-shadow: var(--shadow-sm); border: none; transition: transform 0.2s; }
         .btn-download:hover { background: var(--primary-dark); transform: scale(1.05); }
@@ -101,7 +108,7 @@
         .wa-link:hover { color: var(--primary-dark); }
         .footer-text-2 { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
 
-        /* MODALS */
+        /* DI-MODAL */
         .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); z-index: 100; display: flex; justify-content: center; align-items: center; padding: 20px; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
         .modal-overlay.show { opacity: 1; visibility: visible; }
         .modal-content { position: relative; width: 100%; transform: scale(0.9); transition: all 0.3s ease; }
@@ -170,7 +177,7 @@
         </div>
 
         <div class="data-section">
-            <!-- Toolbar Tabel (Tombol Unduh PDF) -->
+            <!-- Toolbar ya Tafola (Konope ya go laolla PDF) -->
             <div class="table-toolbar">
                 <button class="btn-download" onclick="openDownloadModal()" title="Cetak Rekapan PDF">
                     <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
@@ -178,7 +185,7 @@
             </div>
 
             <div class="table-card">
-                <img src="https://ibb.co.com/LhCWjrQV" alt="Logo Watermark" class="table-watermark-img">
+                <img src="https://www.image2url.com/r2/default/images/1780641722418-0d37c154-7286-49b8-97d7-b8ae78d10f81.png" alt="Logo Watermark" class="table-watermark-img">
                 <div class="table-scroll-area">
                     <table id="main-table">
                         <thead>
@@ -350,10 +357,10 @@
 </div>
 
 <script>
-    // URL GOOGLE APPS SCRIPT
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzqrnvWhP4qeGhOlPuN0g7EgH7PQ0R_Yk6397hs5JJhViJp7Zdur14VwB_hX0SdrJLj/exec"; 
+    // URL YA GOOGLE APPS SCRIPT
+    const WEB_APP_URL = "MASUKAN_URL_WEB_APP_DISINI"; 
 
-    /* === CEK MODE ADMIN VIA URL === */
+    /* === LEKOLA ADMIN MODE KA URL === */
     const urlParams = new URLSearchParams(window.location.search);
     const isModeAdmin = urlParams.get('mode') === 'admin';
 
@@ -366,7 +373,7 @@
     function toggleTheme() { isDarkMode = !isDarkMode; localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); initTheme(); }
     initTheme();
 
-    /* === STATE === */
+    /* === MONGWALO O MO SEPELA === */
     // Murni kosong tanpa data dummy
     let transactions = [];
     let currentTab = 'pemasukan'; 
@@ -383,7 +390,7 @@
 
         syncDataFromCloud();
 
-        // Set default bulan ini di filter PDF
+        // Beakanya kgwedi ye e le tlwaelo go sefa sa PDF
         const today = new Date();
         const yyyyMm = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}`;
         document.getElementById('pdf-bulan').value = yyyyMm;
@@ -419,16 +426,15 @@
         } catch(e) { setSyncStatus('error'); }
     }
 
-    /* === FORMATTING === */
+    /* === TLHAMO === */
     function formatRupiah(number) { return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 2 }).format(number).replace('Rp', 'Rp.').replace(/\s/g, ''); }
     function formatDateDisplay(dateString) { const parts = dateString.split('-'); if(parts.length !== 3) return dateString; return `${parts[2]}/${parts[1]}/${parts[0]}`; }
     const namaBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 
-    /* === UI UPDATES === */
+    /* === UI TSHEKATSHEKO === */
     function navigate(view) {
         if(view === 'admin') { document.getElementById('view-public').classList.add('hidden'); document.getElementById('view-admin').classList.remove('hidden'); resetForm(); } 
         else { 
-            // Jika mau kembali ke publik dari admin url, bersihkan url-nya
             if(isModeAdmin) { window.history.pushState({}, document.title, window.location.pathname); }
             document.getElementById('view-admin').classList.add('hidden'); document.getElementById('view-public').classList.remove('hidden'); 
         }
@@ -492,7 +498,7 @@
         });
     }
 
-    /* === MODALS === */
+    /* === DI-MODAL === */
     function showText(text) { document.getElementById('full-text-content').textContent = text; document.getElementById('text-modal').classList.add('show'); }
     function openDownloadModal() { document.getElementById('download-modal').classList.add('show'); }
     function closeModal(e, modalId) { if(!e || e.target.classList.contains('modal-overlay') || e.target.classList.contains('btn-close-modal')) { document.getElementById(modalId).classList.remove('show'); } }
@@ -508,7 +514,7 @@
         if(val === 'rentang') document.getElementById('filter-rentang-wrap').classList.remove('hidden');
     }
 
-    /* === FUNGSI GENERATE PDF === */
+    /* === MODIRO WA GO DIRA PDF === */
     function generatePDF() {
         const filterType = document.getElementById('pdf-filter-type').value;
         let filteredData = []; let subtitleStr = "";
@@ -586,7 +592,7 @@
         doc.save(`Rekapan_Kas_${subtitleStr.replace(/\s+/g, '_')}.pdf`); closeModal(null, 'download-modal');
     }
 
-    /* === CRUD LOGIC (Optimistic UI) === */
+    /* === TIKOLOGO YA CRUD (Optimistic UI) === */
     function switchFormMode(mode) {
         document.getElementById('f-tab-manual').classList.remove('active'); document.getElementById('f-tab-ai').classList.remove('active'); document.getElementById(`f-tab-${mode}`).classList.add('active');
         if(mode === 'manual') { document.getElementById('form-manual').classList.remove('hidden'); document.getElementById('form-ai').classList.add('hidden'); } 
@@ -632,7 +638,7 @@
         document.getElementById('ai-text').value = ''; document.getElementById('ai-preview').classList.add('hidden'); tempAIBulkData = [];
     }
 
-    /* === AI BULK LOGIC === */
+    /* === TIKOLOGO YA AI BULK === */
     function analyzeAIBulk() {
         const text = document.getElementById('ai-text').value; if(!text.trim()) { alert("Kolom teks tidak boleh kosong!"); return; }
         const lines = text.split('\n'); tempAIBulkData = [];
